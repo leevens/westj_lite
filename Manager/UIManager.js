@@ -54,25 +54,7 @@ let UIManager = class UIManager extends cc.Component {
         }
         console.log("没有找到该面板");
     }
-    ChangeCoin(n) {
-        GameSystem_1.default.addCoin(n);
-        if (n > 0)
-            TipGroup_1.default.instance.setText(-1, "灵气+" + GameTools_1.default.refSetCoin(n));
-        cc.systemEvent.emit(EventConst_1.EventConst.Coin);
-    }
-    ChangeGold(n) {
-        GameSystem_1.default.addGold(n);
-        if (n > 0) {
-            TipGroup_1.default.instance.setText(-1, "功德+" + GameTools_1.default.refSetCoin(n));
-        }
-        else {
-            TipGroup_1.default.instance.setText(-1, "功德-" + GameTools_1.default.refSetCoin(-n));
-        }
-        cc.systemEvent.emit(EventConst_1.EventConst.Gold);
-    }
-    AddPanelStack(panel) {
-        this.panelStack.push(panel);
-    }
+   
     ShowInter() {
         this.internum++;
         if (this.internum >= GameSystem_1.default.splashAdCount) {
@@ -90,20 +72,7 @@ let UIManager = class UIManager extends cc.Component {
         }
         return false;
     }
-    async showUseGoldEffect() {
-        this.UseGoldEffectContent.active = true;
-        this.UseGoldEffectContentSkeleton.setAnimation(0, "eff_Sskill_eff", false);
-        this.UseGoldEffectContentSkeleton.setCompleteListener((trackEntry) => {
-            this.UseGoldEffectContent.active = false;
-        });
-        setTimeout(() => {
-            this.UseGoldEffectContent.active = false;
-        }, 2000);
-    }
-    AddCoin(n) {
-        GameSystem_1.default.addCoin(n);
-        cc.systemEvent.emit(EventConst_1.EventConst.Coin);
-    }
+
     async ShowUI(name) {
         const existing = this.Check(name);
         if (existing) {
@@ -130,18 +99,8 @@ let UIManager = class UIManager extends cc.Component {
             return wrapper.panelUI;
         }
     }
-    ChangeJewel(n) {
-        GameSystem_1.default.addJewel(n);
-        if (n > 0)
-            TipGroup_1.default.instance.setText(-1, "灵石+" + GameTools_1.default.refSetCoin(n));
-        cc.systemEvent.emit(EventConst_1.EventConst.Jewel);
-    }
-    GetJewel(n) {
-        GameSystem_1.default.addJewel(n);
-        cc.systemEvent.emit(EventConst_1.EventConst.Jewel);
-    }
+
     OnTouchMove() {
-        console.log("接收事件");
     }
     GetClass(name) {
         const existing = this.Check(name);
