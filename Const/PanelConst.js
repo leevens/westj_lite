@@ -51,7 +51,6 @@ let PanelConst = class PanelConst {
     static ALCHEMY_PANEL = "AlchemyPanel";
     static UnlockSys = "UnlockSys";
     static ARTIFACTS = "ArtifactsPanel";
-    static FreeCoin = "FreeCoin";
     static SignPanel = "SignPanel";
     static RefreshBox = "RefreshBox";
     static RoamChallenge = "RoamChallenge";

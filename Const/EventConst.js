@@ -12,9 +12,6 @@ var EventConst;
 (function (EventConst) {
     EventConst["EV_REFRESH_BUILD_DATA"] = "EV_REFRESH_BUILD_DATA";
     EventConst["EV_REFRESH_DISCIPLE_DATA"] = "EV_REFRESH_DISCIPLE_DATA";
-    EventConst["Coin"] = "Coin";
-    EventConst["Jewel"] = "Jewel";
-    EventConst["Gold"] = "Gold";
     EventConst["EV_UNLOCK_NEW_DISCIPLE"] = "EV_UNLOCK_NEW_DISCIPLE";
     EventConst["EV_UNLOCK_NEW_BUILDER"] = "EV_UNLOCK_NEW_BUILDER";
     EventConst["GAME_BG_TOUCH_START"] = "GAME_BACKG_TOUCH_START";
@@ -48,10 +45,7 @@ var EventConst;
     EventConst["SaveManager"] = "SaveManager";
     EventConst["NETWORK_STATUS_CHANGE"] = "NETWORK_STATUS_CHANGE";
 })(EventConst || (exports.EventConst = EventConst = {}));
-exports.ATKTYPE = {
-    MELEE: "近战",
-    RANGED: "远程"
-};
+
 function RandGet100() {
     return Math.floor(100 * Math.random());
 }

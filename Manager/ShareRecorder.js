@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const CoinOutputDataManager_1 = require("CoinOutputDataManager");
 const SoundManager_1 = require("SoundManager");
 const GameTools_1 = require("GameTools");
 const TipGroup_1 = require("TipGroup");
@@ -20,23 +19,7 @@ let ShareRecorder = class ShareRecorder extends UIBase_1.default {
         this.CloseThis();
     }
     start() { }
-    ClickGet() {
-        SoundManager_1.SoundManager.instance.play(SoundManager_1.Sound.Click);
-        GameTools_1.default.getSdk().shareRecorder(async () => {
-            const output = await CoinOutputDataManager_1.default.Instance.GetOutPut();
-            const coinAmount = 600 * output;
-            UIManager_1.default.Instance.ChangeCoin(coinAmount);
-            this.CloseThis();
-        }, () => {
-            TipGroup_1.default.instance.setText(-1, "分享失败");
-        });
-    }
-    async onEnable() {
-        super.onEnable();
-        const output = await CoinOutputDataManager_1.default.Instance.GetOutPut();
-        const coinAmount = 600 * output;
-        this.reward.string = "" + GameTools_1.default.refSetCoin(coinAmount);
-    }
+
 };
 __decorate([
     property(cc.Label)

@@ -28,29 +28,7 @@ let GameTools = class GameTools {
     static getHowPoint(val, scale) {
         return Math.floor(val * scale) / scale;
     }
-    static refSetCoin(val) {
-        if (val == null) {
-            return "???";
-        }
-        if (typeof val != "string") {
-            val = Number(val);
-        }
-        if (val < 1000) {
-            return Math.floor(val) == val ? val.toFixed(0) + "" : val.toFixed(2) + "";
-        }
-        let out = "???";
-        const n = this.units.length;
-        let base = 1;
-        for (let i = 0; i < n; i++) {
-            const upper = 1000 * base;
-            if (val < upper) {
-                out = (Math.floor(val / base * 10) / 10) + this.units[i];
-                break;
-            }
-            base = upper;
-        }
-        return out;
-    }
+    
     static ConvertTargetPointToCoor(point, from, to) {
         let out = cc.Vec2.ZERO;
         try {

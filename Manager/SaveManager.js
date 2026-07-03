@@ -41,13 +41,7 @@ class SaveManager {
             return e;
         return n;
     }
-    static readpack(t, e) {
-        const n = this.readRecrder.readData(t);
-        if (n === undefined)
-            return e;
-        return n;
-        return n;
-    }
+
     static readobjArray(t, e) {
         const n = this.readRecrder.readData(t);
         if (n === undefined)
@@ -86,12 +80,7 @@ class SaveManager {
         }
         this.readRecrder.addData(t, e);
     }
-    static readEveryDay(t, e) {
-        const n = this.readRecrder.readData(t);
-        if (n === undefined)
-            return e;
-        return n;
-    }
+
     static init(data = null) {
         if (!data) {
             console.log("！！！！！！！！！！！本地存档数据:");
