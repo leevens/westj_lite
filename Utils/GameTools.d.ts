@@ -10,7 +10,6 @@ export default class GameTools {
     static bundle: cc.AssetManager.Bundle | null;
     static sdkInstance: SdkManager | null;
     static getHowPoint(val: number, scale: number): number;
-    static refSetCoin(val: number): string;
     static ConvertTargetPointToCoor(point: cc.Vec2, from: cc.Node, to: cc.Node): cc.Vec2;
     static ConvertNumberToAscii(val: number, units?: string[], withPlus?: boolean): string;
     static loadAudioClip(bundleName: string, path: string): Promise<cc.AudioClip | null>;
