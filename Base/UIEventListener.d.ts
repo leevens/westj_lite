@@ -1,0 +1,33 @@
+export default class UIEventListener extends cc.Component {
+    touchLongEvents: any;
+    touchCancelEvents: any;
+    touchMoveEvents: any;
+    touchEvents: any;
+    touchStartEvents: any;
+    touchSliderEvents: any;
+    isDowning: any;
+    isSliderY: any;
+    touchAudio: any;
+    isSliderEffect: any;
+    downTimer: any;
+    sliderEffSpeed: any;
+    rawScale: any;
+    clickInterval: any;
+    clickTime: any;
+    longDownEffTime: any;
+    initScale: any;
+    touchAnim: any;
+    addTouchCancelEvent(t: any): void;
+    addTouchStartEvent(t: any): void;
+    onLoad(): void;
+    addTouchEvent(t: any): void;
+    touchStart(): void;
+    static Get(t: any, e: any): any;
+    touchEnd(): void;
+    touchCancel(): void;
+    touchMove(t: any): void;
+    onDestroy(): void;
+    addTouchLongEvent(t: any): void;
+    update(): void;
+    addMoveEvent(t: any): void;
+}
